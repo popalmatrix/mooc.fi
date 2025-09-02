@@ -1,0 +1,30 @@
+# The line below imports the 'sqrt' function from Python's 'math' module.
+# The 'math' module contains many useful mathematical functions.
+# Importing 'sqrt' lets us use it directly in our code to find the square root of a number.
+from math import sqrt
+
+# The following lines of code prompt the user to enter the values for a, b, and c.
+# The input() function gets the user's entry as a string.
+# We use float() to convert the string to a floating-point number (a number with a decimal point),
+# which is necessary for the mathematical calculations.
+a = float(input("The value of a: "))
+b = float(input("The value of b: "))
+c = float(input("The value of c: "))
+
+# The discriminant is the part of the quadratic formula inside the square root, (b² - 4ac).
+# We calculate it first and store it in a variable to make the code cleaner and easier to read.
+# The double asterisk (**) is the exponentiation operator in Python (b**2 means b to the power of 2).
+discriminant = (b**2 - (4*a*c))
+
+# The quadratic formula has two parts due to the '±' (plus/minus) sign.
+# Here, we calculate the first root using the plus sign.
+root1 = (-b + sqrt(discriminant))/(2*a)
+
+# And here, we calculate the second root using the minus sign.
+# This gives us the two solutions for the quadratic equation.
+root2 = (-b - sqrt(discriminant))/(2*a)
+
+# This line uses an f-string to print the final result.
+# An f-string (formatted string literal) is a modern way to embed expressions inside string literals.
+# It makes it easy to include the values of variables (like root1 and root2) directly within the printed text.
+print(f"The roots are {root1} and {root2}")
