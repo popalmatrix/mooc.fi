@@ -1,0 +1,83 @@
+"""PIN Checker Program Concepts Flashcards
+Front: Purpose of the attempts variable
+Back: To act as a counter, tracking the number of times the user has tried to enter a PIN.
+
+Front: Why the attempts variable is initialized to 0
+Back: To ensure the count starts from a known value and is ready to be incremented for the first attempt.
+
+Front: The break statement's function
+Back: To immediately terminate the while loop, preventing it from running any more times.
+
+Front: The purpose of the while True: loop
+Back: To create an an infinite loop that will continue to run until a specific condition (the correct PIN) is met to stop it.
+
+Front: The else block in the PIN checker program
+Back: The code inside the else block is executed only when the if statement's condition (the correct PIN) is false.
+
+Front: The line attempts += 1
+Back: This is a shorthand operator that adds 1 to the current value of the attempts variable.
+
+Front: Variable initialization
+Back: The process of assigning an initial value to a variable before it is used, such as attempts = 0.
+
+Front: Why the final message is outside the loop
+Back: Code outside the loop is only executed after the loop has been completely exited by the break statement.
+
+Front: The input() function's purpose
+Back: To prompt the user for input and store the entered data as a string.
+
+Front: Conditional statement
+Back: A programming construct, like an if statement, that executes code based on whether a condition is true or false.
+
+Front: Why if attempts == 1: is necessary
+Back: To check if the correct PIN was entered on the first try so the program can display a special message.
+
+Front: The meaning of pin == "4321"
+Back: This is a comparison that evaluates to True if the value of the pin variable is exactly equal to the string "4321".
+
+Front: What happens if the break statement is removed
+Back: The program would continue running in an infinite loop even after the correct PIN is entered.
+
+Front: Why input() returns a string
+Back: By default, the input() function reads all user input as text, so it's a string even if the user types a number.
+
+Front: The difference between == and =
+Back: The == operator is used for comparison (checking if two values are equal), while the = operator is used for assignment (giving a variable a value).
+
+Front: Purpose of the else block after if attempts == 1:
+Back: To handle all other cases where the correct PIN was entered but it was NOT the first attempt.
+
+Front: What is an f-string?
+Back: A string literal prefixed with f that allows for embedding expressions inside curly braces, like f"Count is {attempts}".
+
+Front: Example of a counter variable in a loop
+Back: A variable that starts at 0 and is incremented with each iteration of the loop, like attempts in the PIN program.
+
+Front: How to convert user input to an integer
+Back: By using the int() function, for example, number = int(input("Number:")).
+
+Front: The result of a conditional expression
+Back: A boolean value (True or False).
+
+Front: What does a break statement do?
+Back: It causes the program to exit the innermost loop it is currently in.
+
+Front: How to check if two strings are identical
+Back: Using the equality operator ==, such as in if pin == "4321":.
+
+Front: Difference between while True: and while condition:
+Back: A while True loop runs infinitely and needs a break, while a while condition loop runs only as long as its condition is true.
+
+Front: What is input?
+Back: A built-in Python function that reads a line from the user's input, converts it to a string, and returns the result.
+
+Front: Why is the attempts variable outside the loop?
+Back: The variable must be initialized outside the loop so its value is not reset to 0 every time the loop runs.
+
+
+
+
+
+
+
+"""
