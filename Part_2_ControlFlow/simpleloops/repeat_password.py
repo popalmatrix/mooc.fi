@@ -7,9 +7,10 @@ while True:
     repeatedpass = input("Repeat Password: ")
 
     # This 'if' statement checks for the correct password.
-    if repeatedpass == userpass:
+    if userpass == repeatedpass:
         # If the passwords match, the 'break' statement is triggered.
         # This immediately exits the loop.
+        #must be userpass on left side
         break
     
     # This line is not inside an 'if' block. It will run every time the loop
