@@ -1,0 +1,195 @@
+Of course\! Here is the content for each flashcard, formatted for easy copying and pasting.
+
+-----
+
+### **Flashcard 1: `while True` loop**
+
+**Front:**
+
+```
+What is a `while True` loop?
+```
+
+**Back:**
+
+```
+It's a loop that repeats forever unless stopped by a `break` command.
+
+Mnemonic: Think of a "Treadmill" that is always `True` (on). You keep running in place until you hit the `break` (stop) button.
+
+while True:
+    print("This will print repeatedly...")
+    user_input = input("Type 'stop' to end: ")
+    if user_input == 'stop':
+        break # Exit the loop
+print("Loop ended!")
+```
+
+-----
+
+### **Flashcard 2: `break` command**
+
+**Front:**
+
+```
+What does the `break` command do?
+```
+
+**Back:**
+
+```
+It's the "emergency exit" that immediately stops and gets you out of a loop.
+
+Mnemonic: `break` is like hitting the "Brakes" in a car. It stops the motion (the loop) instantly.
+
+secret_code = "1234"
+while True:
+    guess = input("Enter the code: ")
+    if guess == secret_code:
+        print("Access Granted!")
+        break # Stops the loop on a correct guess
+    else:
+        print("Incorrect. Try again.")
+```
+
+-----
+
+### **Flashcard 3: Input Validation**
+
+**Front:**
+
+```
+What is Input Validation?
+```
+
+**Back:**
+
+```
+Using a loop to repeatedly ask a user for input until it meets specific criteria (like a correct PIN).
+
+Mnemonic: A persistent "Bouncer" at a club. They keep checking IDs (input) until they see a valid one, and only then do they let you `break` free and enter.
+
+while True:
+    age_str = input("Please enter your age (must be 18 or older): ")
+    if age_str.isdigit():
+        age = int(age_str)
+        if age >= 18:
+            print("Welcome!")
+            break # Valid input, so we exit
+    print("Invalid input. Please enter a valid number, 18 or older.")
+```
+
+-----
+
+### **Flashcard 4: Helper Variables**
+
+**Front:**
+
+```
+What are Helper Variables?
+```
+
+**Back:**
+
+```
+Variables created *outside* a loop to help track something inside it, like a count, a total sum, or a previous value.
+
+Mnemonic: A "Scorekeeper" for a game. They stand outside the court (the loop) but keep track of the score (`attempts` or `total_sum`) as the game (the loop) progresses.
+
+# Helper variables initialized outside the loop
+attempts = 0
+pin = "9876"
+
+while attempts < 3:
+    guess = input("Enter PIN: ")
+    attempts += 1 # Helper variable is updated inside
+    if guess == pin:
+        print("Correct!")
+        break
+print(f"You used {attempts} attempts.")
+```
+
+-----
+
+### **Flashcard 5: Debugging Loops**
+
+**Front:**
+
+```
+How do you debug a loop with a `print` statement?
+```
+
+**Back:**
+
+```
+By placing a `print()` statement inside the loop, you can see the value of your variables on each pass, helping you find where things go wrong.
+
+Mnemonic: Using a "Detective's Magnifying Glass." The `print` statement lets you look closely at the clues (your variables) at each step to solve the mystery of your bug.
+
+total = 0
+# Goal is to sum numbers from 1 to 3
+for i in range(1, 4):
+    total += i
+    # Debug print statement shows the state at each iteration
+    print(f"DEBUG: i is currently {i}, total is now {total}")
+
+print(f"Final total: {total}")
+```
+
+-----
+
+### **Flashcard 6: String Concatenation**
+
+**Front:**
+
+```
+What is String Concatenation in a loop?
+```
+
+**Back:**
+
+```
+Using the `+` operator inside a loop to build a longer string piece by piece with each iteration.
+
+Mnemonic: Making a "Friendship Bracelet." With each pass of the loop, you add a new bead (`+ new_string`) to the bracelet (`shopping_list_str`), making it longer.
+
+shopping_list_str = "My list: " # Initialize helper string
+items = ["apples", "bread", "milk"]
+
+for item in items:
+    shopping_list_str += item + ", " # Add each item to the string
+
+# The final string is "My list: apples, bread, milk, "
+print(shopping_list_str)
+```
+
+-----
+
+### **Flashcard 7: `try-except` for Input Validation**
+
+**Front:**
+
+```
+How can you handle non-integer input during validation?
+```
+
+**Back:**
+
+```
+Use a `try-except` block. The `try` block attempts the action (like converting input to an integer). If it fails, the `except` block runs instead of crashing the program.
+
+Mnemonic: A "Safety Net" for an acrobat. The acrobat (`try`) attempts a trick. If they fall (invalid input), the net (`except`) catches them safely so they can try again.
+
+while True:
+    num_str = input("Enter a positive number: ")
+    try:
+        number = int(num_str) # Attempt to convert to an integer
+        if number > 0:
+            print("Thank you!")
+            break
+        else:
+            print("Number must be positive.")
+    except ValueError:
+        # This block runs if int() fails
+        print("That's not a valid number! Please try again.")
+```
