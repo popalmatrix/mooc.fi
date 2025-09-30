@@ -1,26 +1,15 @@
-"""Please write a program which prints out all the even numbers between two and thirty, using a loop. Print each number on a separate line."""
+# Ask the user to enter the upper limit
+limit = int(input("Upper limit: "))
 
-# --- Step 1: Initialization ---
-# We create a variable called 'number' and give it a starting value of 2.
-# This is our starting point because it's the first even number we want to print.
-number = 2
+# Start from 1, which is the first power of two (2^0)
+number = 1
 
-# --- Step 2: The Loop Condition ---
-# We start a 'while' loop. This loop will continue to run as long as the
-# condition inside the parentheses is true.
-# The condition 'number < 31' means the loop will run for numbers 2, 4, 6... up to 30.
-# When 'number' becomes 32, the condition will be false and the loop will stop.
-while (number < 31):
-    
-    # --- Step 3: The Action ---
-    # Inside the loop, we print the current value of our 'number' variable.
-    # The first time through, it will print 2. The second time, 4, and so on.
+# Loop continues as long as the current number is less than or equal to the limit
+while number <= limit:
+    # We print the number *before* multiplying it by 2
+    # Why? Because the current value of 'number' is still within the allowed limit
     print(number)
-    
-    # --- Step 4: The Increment ---
-    # This is the most important step for this problem. We increase the value
-    # of 'number' by 2. This is shorthand for 'number = number + 2'.
-    # By adding 2 each time, we ensure that we are always moving to the next even number.
-    number += 2
 
-# Once the loop finishes, the program ends.
+    # Now we double the number for the next iteration
+    # This way, the next power of two will be checked against the limit before printing
+    number *= 2
