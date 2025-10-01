@@ -1,0 +1,107 @@
+The "Story" of the Problem
+Before you write a single line of code, tell yourself the story of what you need to do.
+
+"I need a target number from the user. Let's call it the limit."
+
+"I need to start adding numbers, beginning with 1."
+
+"I need to keep a running total of the numbers I've added."
+
+"I have to keep going as long as my running total is less than the limit."
+
+"I also need to build a text string that shows the calculation, like '1 + 2 + 3'."
+
+"Once the running total reaches or passes the limit, I'll stop and print out the string and the final total."
+
+This "story" is your blueprint. Now, let's turn each part of the story into code.
+
+Step 1: The Ingredients (Variables)
+Think about the key pieces of information you need to track from the story.
+
+The target number: limit
+
+The number we're currently adding: Let's call it current_number.
+
+The running total: Let's call it running_sum (this is better than sum to avoid conflict with Python's built-in sum() function).
+
+The text string of the calculation: Let's call it calculation_string.
+
+Step 2: The Setup (Initialization)
+Before we can start looping, what's our starting point? We always start with the number 1.
+
+Get the limit from the user.
+
+Python
+
+limit = int(input("Limit: "))
+(Remember int() because input() gives you text, and you need a number to do math).
+
+Set up your starting numbers. The first number is 1.
+
+Python
+
+current_number = 1
+running_sum = 1 
+calculation_string = "1"
+(This is a clever shortcut. By setting these up before the loop, we don't need a special if statement inside the loop just to handle the first number).
+
+Step 3: The Engine (The while Loop)
+The core of the program is the repeating action. The story says: "keep going as long as my running total is less than the limit." This is a perfect job for a while loop.
+
+The condition is clear:
+
+Python
+
+while running_sum < limit:
+What needs to happen inside the loop on each pass?
+
+Move to the next number: current_number was 1, now it needs to be 2, then 3...
+
+Python
+
+current_number += 1  # Same as current_number = current_number + 1
+Add it to the total:
+
+Python
+
+running_sum += current_number # Add the new number to our total
+Update the string: We need to add " + 2", then " + 3", etc.
+
+Python
+
+calculation_string += f" + {current_number}"
+(The f-string is perfect for this. It lets you easily combine text and variables).
+
+Step 4: The Grand Finale (The print Statement)
+What happens when the while loop condition (running_sum < limit) is no longer true? The loop stops, and the program moves to the next line. This is where you show the result.
+
+Combine the final string, an equals sign, and the final sum.
+
+Python
+
+print(f"The consecutive sum: {calculation_string} = {running_sum}")
+Putting It All Together (Your Turn)
+Now, try to write it yourself. Cover up the original code and try to build it from these logical steps.
+
+Your Mental Checklist:
+
+[ ] Goal: Ask for a limit.
+
+[ ] Setup: Create variables for the current_number, the running_sum, and the calculation_string. What are their starting values?
+
+[ ] Engine: Write the while loop. What is the condition to keep going?
+
+[ ] Loop Actions: Inside the loop, what are the three things you must do in order? (Get next number, add to sum, add to string).
+
+[ ] Result: After the loop, what do you print?
+
+This thought process—Story -> Ingredients -> Setup -> Engine -> Finale—will allow you to reconstruct this program, and many others like it, from scratch.
+
+Practice to Master It
+To make it stick, challenge yourself with small changes:
+
+Can you modify it to start summing from the number 5 instead of 1?
+
+Can you change it to only add even numbers (2 + 4 + 6...)? (Hint: you'll need an if statement inside your loop).
+
+Can you add a counter to show how many numbers were added in total?
