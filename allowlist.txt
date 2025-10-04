@@ -1,0 +1,9 @@
+# AI and Development Services
+openai.com
+chatgpt.com
+gemini.google.com
+ai.google.com
+googleapis.com
+github.com
+githubusercontent.com
+codex.io
