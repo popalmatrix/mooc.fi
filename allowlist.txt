@@ -7,3 +7,4 @@ googleapis.com
 github.com
 githubusercontent.com
 codex.io
+codedex.io/
