@@ -8,3 +8,5 @@ github.com
 githubusercontent.com
 codex.io
 codedex.io/
+my.ny.gov
+ny.gov
