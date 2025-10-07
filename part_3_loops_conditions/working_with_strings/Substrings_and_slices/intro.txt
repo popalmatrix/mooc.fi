@@ -1,0 +1,30 @@
+Substrings and slices
+A substring of a string is a sequence of characters that forms a part of the string. For example, the string example contains the substrings exam, amp and ple, among others. In Python programming, the process of selecting substrings is usually called slicing, and a substring is often referred to as a slice of the string. The two terms can often be used interchangeably.
+
+If you know the beginning and end indexes of the slice you wish to extract, you can do so with the notation [a:b]. This means the slice begins at the index a and ends at the last character before index b - that is, including the first, but excluding the last. You can think of the indexes as separator lines drawn on the left side of the indexed character, as illustrated in the image below:
+
+3 2 3
+Let's have a closer look at some sliced strings:
+
+input_string = "presumptious"
+
+print(input_string[0:3])
+print(input_string[4:10])
+
+# if the beginning index is left out, it defaults to 0
+print(input_string[:3])
+
+# if the end index is left out, it defaults to the length of the string
+print(input_string[4:])
+Sample output
+pre
+umptio
+pre
+umptious
+
+Half open intervals
+In Python string processing the interval [a:b] is half open, which in this case means that the character at the beginning index a is included in the interval, but the character at the end index b is left out. Why is that?
+
+There is no profound reason for this feature. Rather it is a convention inherited from other programming languages.
+
+Half open intervals may feel unintuitive, but in practice they do have some advantages. For example, you can easily calculate the length of a slice with b-a. On the other hand, you must always remember that the character at the end index b will not be included in the slice.
