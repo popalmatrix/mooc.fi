@@ -10,3 +10,4 @@ codex.io
 codedex.io/
 my.ny.gov
 ny.gov
+smartazan.com
