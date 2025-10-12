@@ -11,3 +11,7 @@ codedex.io/
 my.ny.gov
 ny.gov
 smartazan.com
+sponsor.ajay.app
+api.sponsor.ajay.app
+googlevideo.com
+youtubei.googleapis.com
