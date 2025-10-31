@@ -1,45 +1,68 @@
 # =======================================================================
-# PYTHON LEARNING MNEMONICS
+# 🐍 PYTHON CORE CONCEPTS MNEMONICS (MOOC.fi Parts 1-3 Review)
 # =======================================================================
 
-## 1. Loop Counter Management (for vs. while)
+## 1. Data Types & Conversion (Part 1)
 
-# Goal: Remember which loop type requires manual counter handling.
-
-# ➡️ FOR Loop: The "Free" Loop (Implicit Counter)
+# 🧠 Mnemonic: The "I F S B" Rule
 # ----------------------------------------------------
-# - **Free:** You are **FREE** from manual counter work (it's handled implicitly by the iterator or range()).
-# - **Finished:** It's **FINISHED** when the sequence is exhausted (a clear, pre-defined end).
+# - **I**nt: **I**nteger (Whole numbers)
+# - **F**loat: **F**loating-point (Decimals)
+# - **S**tr: **S**tring (Text)
+# - **B**ool: **B**oolean (True/False)
 
-# Example of a 'for' loop using a counter implicitly (via range):
-# for i in range(5):
-#     # No 'i += 1' needed!
-#     print(i)
+# 🧠 Mnemonic: Type **Casting**
+# - **C**asting is **C**hanging the **S**hape. You change one type to another (e.g., int("5") or str(10)).
 
-
-# ➡️ WHILE Loop: The "Work" Loop (Explicit Counter)
-# -----------------------------------------------------
-# - **Work:** You have **WORK** to do: You **MUST initialize** the counter AND **update** it (e.g., 'count += 1') inside the loop body.
-# - **Wonder:** You have to **WONDER** if it will stop, so you **MUST guarantee** the change happens to avoid an infinite loop.
-
-# Example of a 'while' loop using a counter explicitly:
-# count = 0   # <--- Initialization (Work 1/3)
-# while count < 5:  # <--- Condition (Wonder)
-#     print(count)
-#     count += 1  # <--- Update/Increment (Work 2/3)
+# 🧠 Mnemonic: **Modulo** Operator (%)
+# - **M**y **O**utput is the **D**ivision **U**n-used **L**eft **O**ver. (It returns the remainder.)
+# Example: 10 % 3 equals 1.
 
 
-## 2. Mutability (Changeable vs. Unchangeable)
+## 2. Conditionals & Function Basics (Part 1 & 2)
 
-# Goal: Remember which data types can be changed in place (without creating a new object).
+# 🧠 Mnemonic: Conditional Flow "E L S" Structure
+# ----------------------------------------------------
+# - **IF** (Start): The first check.
+# - **ELIF**: **E**lves **L**augh (Optional, checks another condition ONLY if previous ones were False).
+# - **ELSE**: **S**oftly (Optional, runs if ALL conditions above were False).
 
-# 🍎 MUTABLE Types: The "Manipulable" Data
-# -------------------------------------------
-# - **M**anipulate: You can change the object's contents **in place** after creation.
-# - Examples: **L**ists, **D**ictionaries, **S**ets.
+# 🧠 Mnemonic: Function **P**arameter vs. **A**rgument
+# - **P**arameter: Is in the function **P**arentheses of the **def**inition (the placeholder name).
+# - **A**rgument: Is the **A**ctual value passed when you **C**all the function.
 
-# Example of Mutable:
-# my_list = [1, 2]
-# print(id(my_list)) # Print original memory ID
-# my_list.append(3) # Change in place
-# print(id
+# 🧠 Mnemonic: **Return**
+# - **R**eaches the **E**nd, **T**erminating the **U**nit, **R**eporting a **N**umber/Value.
+
+
+## 3. Loops and Flow Control (Part 2 & 3)
+
+# 🧠 Mnemonic: **FOR** vs. **WHILE** Counter
+# ----------------------------------------------------
+# - **FOR** Loop: The "**Free**" Loop. You are **F**ree from manually updating the counter.
+# - **WHILE** Loop: The "**Work**" Loop. You have **W**ork to do: **M**ust **I**nitialize AND **I**ncrement/Decrement manually.
+
+# 🧠 Mnemonic: **BREAK** vs. **CONTINUE**
+# - **BREAK**: The "**B**ailout." **B**reaks the loop entirely and jumps *out*.
+# - **CONTINUE**: The "**C**urrent-Skip." **C**uts the current iteration short and moves to the *next cycle*.
+
+# 🧠 Mnemonic: **Nested** Loop
+# - Think of an **O**ven (**Outer**) cooking **I**tems (**Inner**). The inner loop completes all its cycles for every single cycle of the outer loop.
+
+
+## 4. Collections & Strings (Part 2 & 3)
+
+# 🧠 Mnemonic: List **M**utability
+# ----------------------------------------------------
+# - **M**utable: **L**ists and **D**ictionaries are **M**anipulable. You can change them **in place**.
+
+# 🧠 Mnemonic: String **I**mmutability
+# - **I**mmutable: **S**trings and **T**uples are **I**nvariant. Any "change" creates a **new** object.
+
+# 🧠 Mnemonic: **Indexing** "P C F, N C B"
+# - **P**ositive **C**ounts **F**orward (Starts at **0**).
+# - **N**egative **C**ounts **B**ackward (Starts at **-1**).
+
+# Example: word = "PYTHON"
+# print(word[0])  # P
+# print(word[-1]) # N
